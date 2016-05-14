@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+
+<!-- Carousel
+================================================== -->
+  <div style="color:red;text-align:center;">
+    <h1> Indian Student Association Registration</h1>
+  </div>
+
+  <form name="signinform" class="form-signin" method="post">
+        <h3 align="center" class="form-signin-heading">Sign in form</h3>
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="text" id="inputName" class="form-control" placeholder="Name"  required autofocus>
+          <br>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="emailtext" id="inputEmail" class="form-control" placeholder="Email address" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="ValidateEmail(document.signinform.emailtext)">Sign in</button>
+      </form>
+  <script>
+    function ValidateEmail(inputText)
+    {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(inputText.value.match(mailformat))
+      {
+        window.close();
+        window.open("http://requestb.in/");
+      }
+      else
+      {
+        alert("You have entered an invalid email address!");
+        document.signinform.emailtext.focus();
+      }
+    }
+  </script>
+
+  <br>
+  <div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+      <div class="col-lg-4">
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="img-circle" src="Socializing-With-People.jpg" alt="Generic placeholder image" width="140" height="140">
+        <h2>People</h2>
+        <p>You get to meet new people and socialise professionally </p>
+
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="img-circle" src="membership.jpg" alt="Generic placeholder image" width="140" height="140">
+        <h2>Membership</h2>
+        <p>Membership lasts for a year and it's simple and affordable.</p>
+
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="img-circle" src="event1.jpg" alt="Generic placeholder image" width="140" height="140">
+        <h2>Events</h2>
+        <p>Members will have free entry to any events organised by ISA. Free indian cuisine every time..!!</p>
+
+      </div><!-- /.col-lg-4 -->
+</div>
+
+  <script>
+    function bigImg(x) {
+      x.style.height = "180px";
+      x.style.width = "180px";
+    }
+
+    function normalImg(x) {
+      x.style.height = "140px";
+      x.style.width = "140px";
+    }
+  </script>
+
+  <div style="text-align:center">
+    <iframe width="470" height="353" src="https://www.youtube.com/embed/8mbiq7LnSvk" frameborder="0" allowfullscreen></iframe>
+  </div>
+</html>
